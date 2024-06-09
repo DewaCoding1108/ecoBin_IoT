@@ -36,7 +36,7 @@ export async function POST(req:Request){
     // .catch(function(error:any) {
     //   console.log(error.message);
     // });
-    return response;
+    return new Response('ok');
   }
   catch(error){
     console.error('Error saving image:', error);
