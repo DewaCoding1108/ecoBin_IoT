@@ -37,7 +37,7 @@ export default function Home() {
             const data = response.data;
             if(response.data){
               setScannedResult(code.data);
-              router.replace(`/reward/${code.data}?variable=${response.data.fullname}`);
+              router.replace(`/reward/${code.data}`);
             }
             else{
               alert("User tidak ditemukan");

@@ -18,17 +18,17 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
       <header className='bg-gray-200 flex flex-col items-center py-20'>
-        <h1 className="text-5xl">eBin Trash Station</h1>
-        <h1 className="text-xl">Change your waste to save the world!</h1>
+        <h1 className="text-5xl text-black">eBin Trash Station</h1>
+        <h1 className="text-xl text-black">Change your waste to save the world!</h1>
       </header>
-      <main>
+      <main className="bg-gray-200 h-[60vh]">
         {children}
       </main>
-      <footer className="absolute bottom-0 bg-black w-full flex justify-center p-2">
+      {/* <footer className=" bg-black w-full flex justify-center p-2">
           <h1 className = "text-white">
             @EcoBin Tugas Besar Rekayasa Sistem dan Teknologi Informasi
           </h1>
-        </footer>
+        </footer> */}
       </body>
       
     </html>

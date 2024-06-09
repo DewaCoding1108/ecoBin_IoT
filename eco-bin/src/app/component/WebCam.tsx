@@ -100,7 +100,7 @@ const WebCam: React.FC<WebCamProps> = ({userID}) => {
   }
 
   return (
-    <div className="flex flex-row items-center justify-around pb-24">
+    <div className="flex flex-row items-center justify-around">
       <div className="flex flex-col">
         <Webcam
           audio={false}

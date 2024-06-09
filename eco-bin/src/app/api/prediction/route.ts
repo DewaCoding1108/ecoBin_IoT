@@ -5,6 +5,7 @@ export async function POST(req:Request) {
   try{
     const body = await req.json()
     // console.log(body)
+    // const base64Image = body.imageData.split(';base64,').pop();
     const base64Image = body.imageData.split(';base64,').pop();
     const binaryData = Buffer.from(base64Image, 'base64');
     fs.writeFileSync('./public/images/image.jpg', binaryData);
@@ -15,7 +16,7 @@ export async function POST(req:Request) {
       method: "POST",
       url: "https://detect.roboflow.com/irish-canals/2",
       params: {
-        api_key: "TrZa30uWu1523sFfV39Z"
+        api_key: "uX0A3tXlGr7N0iBXb5UE"
       },
       data: image,
       headers: {
