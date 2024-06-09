@@ -7,18 +7,18 @@ export async function POST(req:Request) {
     // console.log(body)
     // const base64Image = body.imageData.split(';base64,').pop();
     const base64Image = body.imageData.split(';base64,').pop();
-    const binaryData = Buffer.from(base64Image, 'base64');
-    fs.writeFileSync('./public/images/image.jpg', binaryData);
-    const image = fs.readFileSync('./public/images/image.jpg', {
-      encoding: "base64"
-    });
+    // const binaryData = Buffer.from(base64Image, 'base64');
+    // fs.writeFileSync('./public/images/image.jpg', binaryData);
+    // const image = fs.readFileSync('./public/images/image.jpg', {
+    //   encoding: "base64"
+    // });
     const response = await axios({
       method: "POST",
       url: "https://detect.roboflow.com/irish-canals/2",
       params: {
         api_key: "uX0A3tXlGr7N0iBXb5UE"
       },
-      data: image,
+      data: base64Image,
       headers: {
         "Content-Type": "application/x-www-form-urlencoded"
       }

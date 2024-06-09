@@ -15,7 +15,7 @@ const QRCodeReader:React.FC<QRCodeReaderProps> = ({submitHandler, webcamRef}) =>
 
   return (
     <div style={{ textAlign: 'center' }}>
-      <h1 className="mb-3">Silakan tekan Scan QR Code</h1>
+      <h1 className="mb-3 text-black">Silakan tekan Scan QR Code</h1>
       <div style={{ width: '100%', maxWidth: '600px', margin: '0 auto' }}>
         <Webcam
           audio={false}
